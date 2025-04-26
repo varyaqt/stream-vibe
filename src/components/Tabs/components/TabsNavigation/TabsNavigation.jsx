@@ -1,7 +1,7 @@
-import getIdFromTitle from "@/utils/getIdFromTitle"
 import "./TabsNavigation.scss"
+import getIdFromTitle from "@/utils/getIdFromTitle"
 import classNames from "classnames"
-import getTabsElementsIdsFromTitle from "../../utils/getTabsElementsIdsFromTitle"
+import getTabsElementsIdsFromTitle from "@/components/Tabs/utils/getTabsElementsIdsFromTitle"
 
 const TabsNavigation = (props) => {
   const { className, id, title, items = [] } = props
@@ -22,6 +22,7 @@ const TabsNavigation = (props) => {
       </h3>
       {items.map((item, index) => {
         const { buttonId, contentId } = getTabsElementsIdsFromTitle(item.title)
+
         return (
           <div
             className={classNames("tabs-navigation__button", {

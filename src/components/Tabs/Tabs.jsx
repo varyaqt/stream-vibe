@@ -1,5 +1,5 @@
-import classNames from "classnames"
 import "./Tabs.scss"
+import classNames from "classnames"
 import getTabsElementsIdsFromTitle from "./utils/getTabsElementsIdsFromTitle"
 import TabsNavigation from "./components/TabsNavigation"
 
@@ -8,24 +8,25 @@ const Tabs = (props) => {
     className,
     title,
     items = [],
-    navigationTargerElementId = null,
+    navigationTargetElementId = null,
   } = props
-
-  const { buttonId, contentId } = getTabsElementsIdsFromTitle(title)
 
   return (
     <div
       className={classNames(className, "tabs")}
       data-js-tabs={JSON.stringify({
-        navigationTargerElementId,
+        navigationTargetElementId,
       })}
     >
-      {!navigationTargerElementId && (
+      {!navigationTargetElementId && (
         <TabsNavigation title={title} items={items} />
       )}
       <div className="tabs__body">
         {items.map((item, index) => {
           const { title, children, isActive } = item
+
+          const { buttonId, contentId } = getTabsElementsIdsFromTitle(title)
+
           return (
             <div
               className={classNames("tabs__content", {

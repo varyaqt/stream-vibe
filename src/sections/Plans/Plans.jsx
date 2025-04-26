@@ -25,7 +25,7 @@ const Plans = () => {
     >
       <Tabs
         title={tabsTitle}
-        navigationTargerElementId={tabsNavigationId}
+        navigationTargetElementId={tabsNavigationId}
         items={planGroups.map((planGroup) => ({
           title: planGroup.title,
           isActive: planGroup.isActive,
