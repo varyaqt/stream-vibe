@@ -47,13 +47,18 @@
     }
   }
 
-  &--black-10 {
-    background-color: var(--color-black-10);
+  &--black {
     border: var(--border);
-  }
+    &-10 {
+      background-color: var(--color-black-10);
+    }
 
-  &--black-08 {
-    background-color: var(--color-black-08);
-    border: var(--border);
+    &-08 {
+      background-color: var(--color-black-08);
+    }
+
+    &-06 {
+      background-color: var(--color-black-08);
+    }
   }
 }
